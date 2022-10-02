@@ -1,89 +1,89 @@
-,country,continent,population,health_care_index,health_care_expenditure_index
-0,Albania,Europe,2877239,53.05,92.72
-1,Algeria,Africa,43984569,54.86,99.61
-2,Argentina,South America,45267449,69.25,125.67
-3,Australia,Oceania,25550683,77.38,140.97
-4,Austria,Europe,9015361,78.73,144.24
-5,Azerbaijan,Asia,10154978,43.18,74.96
-6,Bangladesh,Asia,164972348,42.8,73.17
-7,Belarus,Europe,9448772,59.04,105.39
-8,Belgium,Europe,11598451,74.34,134.81
-9,Brazil,South America,212821986,56.29,100.08
-10,Bulgaria,Europe,6939018,55.4,98.03
-11,Canada,North America,37799407,71.58,131.44
-12,Chile,South America,19144605,65.44,118.89
-13,China,Asia,1440297825,64.48,115.53
-14,Colombia,South America,50976248,67.24,120.65
-15,Costa Rica,South America,5102158,62.42,112.66
-16,Croatia,Europe,4100719,62.68,115.03
-17,Cyprus,Europe,1208886,51.75,89.36
-18,Denmark,Europe,5795780,80.0,147.47
-19,Dominican Republic,North America,10866667,54.67,95.61
-20,Ecuador,South America,17688599,70.59,126.98
-21,Egypt,Africa,102659126,45.84,78.61
-22,Estonia,Europe,1326693,72.67,132.9
-23,Finland,Europe,5542237,75.79,138.01
-24,France,Europe,65298930,79.99,146.81
-25,Georgia,Asia,3987805,51.24,88.33
-26,Germany,Europe,83830972,73.32,133.56
-27,Greece,Europe,10413936,56.21,99.67
-28,Guatemala,North America,17971382,67.75,121.19
-29,Hong Kong,Asia,7507523,66.08,119.75
-30,Hungary,Europe,9655983,47.8,86.17
-31,Iceland,Europe,341628,65.92,120.3
-32,India,Asia,1382345085,67.13,120.5
-33,Indonesia,Asia,274021604,60.48,107.29
-34,Iran,Asia,84176929,51.7,90.06
-35,Iraq,Asia,40372771,41.36,70.2
-36,Ireland,Europe,4947267,51.89,94.23
-37,Israel,Asia,8678517,73.29,134.31
-38,Italy,Europe,60446035,66.59,120.66
-39,Japan,Asia,126407422,81.14,148.24
-40,Jordan,Asia,10220604,64.6,116.14
-41,Kazakhstan,Asia,18815231,50.7,88.95
-42,Kenya,Africa,53968739,55.59,98.02
-43,Kuwait,Asia,4281320,56.21,100.47
-44,Latvia,Europe,1882408,62.91,113.01
-45,Lebanon,Asia,6819976,64.38,120.05
-46,Lithuania,Europe,2715340,69.49,125.61
-47,Malaysia,Asia,32436963,68.1,122.52
-48,Malta,Europe,441750,68.81,123.37
-49,Mexico,North America,129166028,70.12,125.71
-50,Morocco,Africa,36985624,45.72,77.88
-51,Nepal,Asia,29225196,56.88,99.67
-52,Netherlands,Europe,17141544,74.65,136.05
-53,New Zealand,Oceania,4829021,73.81,133.94
-54,Nigeria,Africa,206984347,51.59,89.88
-55,Norway,Europe,5428594,74.36,135.67
-56,Oman,Asia,5128058,58.15,103.73
-57,Pakistan,Asia,221612785,60.59,107.33
-58,Panama,North America,4326296,59.93,106.08
-59,Peru,South America,33050211,56.15,98.5
-60,Philippines,Asia,109830324,67.47,120.67
-61,Poland,Europe,37839255,61.01,109.36
-62,Portugal,Europe,10191409,71.88,130.79
-63,Puerto Rico,North America,2846860,55.73,101.76
-64,Qatar,Asia,2889284,73.3,133.07
-65,Romania,Europe,19214608,55.06,96.89
-66,Russia,Europe,145945524,57.59,101.55
-67,Saudi Arabia,Asia,34905942,59.11,105.18
-68,Singapore,Asia,5858322,70.84,131.52
-69,Slovakia,Europe,5460109,60.02,108.64
-70,Slovenia,Europe,2078989,64.58,118.92
-71,South Africa,Africa,59436725,64.14,115.76
-72,South Korea,Asia,51276977,81.97,149.94
-73,Spain,Europe,46757980,78.88,145.24
-74,Sri Lanka,Asia,21428970,72.53,131.07
-75,Sweden,Europe,10110233,69.23,126.86
-76,Switzerland,Europe,8665615,72.44,136.25
-77,Taiwan,Asia,23824369,86.71,159.66
-78,Thailand,Asia,69830779,77.95,142.04
-79,Tunisia,Africa,11839918,57.18,100.55
-80,Turkey,Asia,84495243,69.8,125.57
-81,Ukraine,Europe,43686577,52.33,91.33
-82,United Arab Emirates,Asia,9910892,67.04,123.91
-83,United Kingdom,Europe,67948282,74.46,136.57
-84,United States,North America,331341050,69.27,127.3
-85,Uruguay,South America,3475842,66.28,119.62
-86,Venezuela,South America,28421581,39.66,69.14
-87,Vietnam,Asia,97490013,57.7,100.69
+country,continent,population,health_care_index,health_care_expenditure_index
+Albania,Europe,2877239,53.05,92.72
+Algeria,Africa,43984569,54.86,99.61
+Argentina,South America,45267449,69.25,125.67
+Australia,Oceania,25550683,77.38,140.97
+Austria,Europe,9015361,78.73,144.24
+Azerbaijan,Asia,10154978,43.18,74.96
+Bangladesh,Asia,164972348,42.8,73.17
+Belarus,Europe,9448772,59.04,105.39
+Belgium,Europe,11598451,74.34,134.81
+Brazil,South America,212821986,56.29,100.08
+Bulgaria,Europe,6939018,55.4,98.03
+Canada,North America,37799407,71.58,131.44
+Chile,South America,19144605,65.44,118.89
+China,Asia,1440297825,64.48,115.53
+Colombia,South America,50976248,67.24,120.65
+Costa Rica,South America,5102158,62.42,112.66
+Croatia,Europe,4100719,62.68,115.03
+Cyprus,Europe,1208886,51.75,89.36
+Denmark,Europe,5795780,80.0,147.47
+Dominican Republic,North America,10866667,54.67,95.61
+Ecuador,South America,17688599,70.59,126.98
+Egypt,Africa,102659126,45.84,78.61
+Estonia,Europe,1326693,72.67,132.9
+Finland,Europe,5542237,75.79,138.01
+France,Europe,65298930,79.99,146.81
+Georgia,Asia,3987805,51.24,88.33
+Germany,Europe,83830972,73.32,133.56
+Greece,Europe,10413936,56.21,99.67
+Guatemala,North America,17971382,67.75,121.19
+Hong Kong,Asia,7507523,66.08,119.75
+Hungary,Europe,9655983,47.8,86.17
+Iceland,Europe,341628,65.92,120.3
+India,Asia,1382345085,67.13,120.5
+Indonesia,Asia,274021604,60.48,107.29
+Iran,Asia,84176929,51.7,90.06
+Iraq,Asia,40372771,41.36,70.2
+Ireland,Europe,4947267,51.89,94.23
+Israel,Asia,8678517,73.29,134.31
+Italy,Europe,60446035,66.59,120.66
+Japan,Asia,126407422,81.14,148.24
+Jordan,Asia,10220604,64.6,116.14
+Kazakhstan,Asia,18815231,50.7,88.95
+Kenya,Africa,53968739,55.59,98.02
+Kuwait,Asia,4281320,56.21,100.47
+Latvia,Europe,1882408,62.91,113.01
+Lebanon,Asia,6819976,64.38,120.05
+Lithuania,Europe,2715340,69.49,125.61
+Malaysia,Asia,32436963,68.1,122.52
+Malta,Europe,441750,68.81,123.37
+Mexico,North America,129166028,70.12,125.71
+Morocco,Africa,36985624,45.72,77.88
+Nepal,Asia,29225196,56.88,99.67
+Netherlands,Europe,17141544,74.65,136.05
+New Zealand,Oceania,4829021,73.81,133.94
+Nigeria,Africa,206984347,51.59,89.88
+Norway,Europe,5428594,74.36,135.67
+Oman,Asia,5128058,58.15,103.73
+Pakistan,Asia,221612785,60.59,107.33
+Panama,North America,4326296,59.93,106.08
+Peru,South America,33050211,56.15,98.5
+Philippines,Asia,109830324,67.47,120.67
+Poland,Europe,37839255,61.01,109.36
+Portugal,Europe,10191409,71.88,130.79
+Puerto Rico,North America,2846860,55.73,101.76
+Qatar,Asia,2889284,73.3,133.07
+Romania,Europe,19214608,55.06,96.89
+Russia,Europe,145945524,57.59,101.55
+Saudi Arabia,Asia,34905942,59.11,105.18
+Singapore,Asia,5858322,70.84,131.52
+Slovakia,Europe,5460109,60.02,108.64
+Slovenia,Europe,2078989,64.58,118.92
+South Africa,Africa,59436725,64.14,115.76
+South Korea,Asia,51276977,81.97,149.94
+Spain,Europe,46757980,78.88,145.24
+Sri Lanka,Asia,21428970,72.53,131.07
+Sweden,Europe,10110233,69.23,126.86
+Switzerland,Europe,8665615,72.44,136.25
+Taiwan,Asia,23824369,86.71,159.66
+Thailand,Asia,69830779,77.95,142.04
+Tunisia,Africa,11839918,57.18,100.55
+Turkey,Asia,84495243,69.8,125.57
+Ukraine,Europe,43686577,52.33,91.33
+United Arab Emirates,Asia,9910892,67.04,123.91
+United Kingdom,Europe,67948282,74.46,136.57
+United States,North America,331341050,69.27,127.3
+Uruguay,South America,3475842,66.28,119.62
+Venezuela,South America,28421581,39.66,69.14
+Vietnam,Asia,97490013,57.7,100.69
