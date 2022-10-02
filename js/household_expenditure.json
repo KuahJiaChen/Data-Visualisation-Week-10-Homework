@@ -1,0 +1,67 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "title": "Average household expenditure ($ per capita) for each country throughout the period from 1960 to 2016",
+      "width": 700,
+      "height": 600,
+    "data": {
+      "url": "https://raw.githubusercontent.com/KuahJiaChen/Data-Visualisation-Homework/main/js/world_map.json",
+      "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+    },
+    "projection": {"type": "equalEarth"},
+    "layer": [
+      {
+        "transform": [
+          {
+            "calculate": "'Data is not available in ' + datum.properties.NAME",
+            "as": "note"
+          }
+        ],
+        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"},
+        "encoding": {"tooltip": {"field": "note"}}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+          "format": {"type": "topojson", "feature": "oceans"}
+        },
+        "mark": {"type": "geoshape", "fill": "skyblue"}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/WorldMapWithGraticules.topojson",
+          "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+        },
+        "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
+      },
+      {
+        "transform": [
+          {
+            "lookup": "properties.NAME",
+            "from": {
+              "data": {
+                "url": "https://raw.githubusercontent.com/KuahJiaChen/Data-Visualisation-Homework/main/data/householdexpenditure.csv"
+              },
+              "key": "Country",
+              "fields": ["Household Expenditure Per Capita (in $)"]
+            }
+          }
+        ],
+        "mark": {"type": "geoshape", "stroke": "white"},
+        "encoding": {
+          "color": {
+            "field": "Household Expenditure Per Capita (in $)",
+            "type": "quantitative",
+            "scale": {"type": "linear",
+            "domain": [5000, 10000, 15000, 20000, 25000],
+            "range": ["#F4D166","#F6BC58", "#FB934B", "#EB6E49", "#D64C45", "#B71D3E"]},
+            "legend": {"title":"Expenditure Per Capita in $"}
+          },
+          "tooltip": [
+            {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+            {"field": "Household Expenditure Per Capita (in $)", "type": "quantitative"}
+          ]
+        }
+      }
+    ],
+    "config": {}
+  }

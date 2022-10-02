@@ -1,10 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
-    "height": 600,
-    "title": "COVID-19 Cases per Country (13 Oct 2020)",
+    "width": 700,
+    "height": 500,
+    "title": "Health Care Quality in each country (2020)",
     "data": {
-      "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/4_interactive_scatter_plot/data/COVID_19_10_Oct_2020.csv"
+      "url": "https://raw.githubusercontent.com/KuahJiaChen/Data-Visualisation-Week-10-Homework/main/data/bubble_plot.csv"
     },
     "params": [
       {
@@ -45,30 +45,25 @@
       }
     ],
     "transform": [
-      {"filter": "datum.Active > 0"},
-      {"filter": "datum.Deaths > 0"},
-      {"filter": "datum.Population > Population_Above"},
+      {"filter": "datum.health_care_index > 0"},
+      {"filter": "datum.health_care_expenditure_index > 0"},
+      {"filter": "datum.population > Population_Above"},
       {
-        "filter": "Continent_selection == null || datum.Continent == Continent_selection"
-      },
-      {
-        "calculate": "datum.Confirmed/datum.Population * 10000",
-        "as": "Cases per 10,000 Population"
+        "filter": "Continent_selection == null || datum.continent == Continent_selection"
       }
     ],
     "encoding": {
       "x": {
-        "field": "Confirmed",
+        "field": "health_care_index",
         "type": "quantitative",
-        "title": "Confirmed Cases",
-        "axis": {"tickCount": 7},
-        "scale": {"type": "log", "domain": [1, 10000000]}
+        "title": "Health Care Index",
+        "scale": {"type": "linear", "domain": [1, 100]}
       },
       "y": {
-        "field": "Deaths",
+        "field": "health_care_expenditure_index",
         "type": "quantitative",
-        "axis": {"tickCount": 6},
-        "scale": {"type": "log", "domain": [1, 1000000]}
+        "title": "Health Care Expenditure Index",
+        "scale": {"type": "linear", "domain": [1, 200]}
       }
     },
     "layer": [
@@ -76,7 +71,7 @@
         "mark": "circle",
         "encoding": {
           "size": {
-            "field": "Population",
+            "field": "population",
             "type": "quantitative",
             "scale": {
               "type": "threshold",
@@ -86,7 +81,7 @@
             "legend": {"format": ".1s"}
           },
           "color": {
-            "field": "Continent",
+            "field": "continent",
             "type": "nominal",
             "scale": {
               "domain": [
@@ -109,16 +104,11 @@
           },
           "opacity": {"value": 0.6},
           "tooltip": [
-            {"field": "Country", "type": "nominal"},
-            {"field": "Confirmed", "type": "quantitative", "format": ","},
-            {"field": "Active", "type": "quantitative", "format": ","},
-            {"field": "Deaths", "type": "quantitative", "format": ","},
-            {"field": "Recovered", "type": "quantitative", "format": ","},
-            {
-              "field": "Cases per 10,000 Population",
-              "type": "quantitative",
-              "format": ".2f"
-            }
+            {"field": "country", "type": "nominal"},
+            {"field": "continent", "type": "nominal"},
+            {"field": "health_care_index", "type": "quantitative", "format": ","},
+            {"field": "health_care_expenditure_index", "type": "quantitative", "format": ","},
+            {"field": "population", "type": "quantitative", "format": ","}
           ]
         }
       },
@@ -132,26 +122,21 @@
           "fontStyle": "italic"
         },
         "encoding": {
-          "text": {"field": "Country", "type": "nominal"},
+          "text": {"field": "country", "type": "nominal"},
           "color": {"value": "black"},
           "opacity": {
             "condition": {
-              "test": "datum['Country'] == 'China' || datum['Country'] == 'Singapore' || datum['Country'] == 'Australia' || datum['Country'] == 'New Zealand' || datum['Country'] == 'Italy' || datum['Country'] == 'Yemen' ||  datum['Country'] == 'United States'",
+              "test": "datum['country'] == 'China' || datum['country'] == 'Singapore' || datum['country'] == 'Australia' || datum['country'] == 'New Zealand' || datum['country'] == 'Italy' || datum['country'] == 'Yemen' ||  datum['country'] == 'United States'",
               "value": 1
             },
             "value": 0
           },
           "tooltip": [
-            {"field": "Country", "type": "nominal"},
-            {"field": "Confirmed", "type": "quantitative", "format": ","},
-            {"field": "Active", "type": "quantitative", "format": ","},
-            {"field": "Deaths", "type": "quantitative", "format": ","},
-            {"field": "Recovered", "type": "quantitative", "format": ","},
-            {
-              "field": "Cases per 10,000 Population",
-              "type": "quantitative",
-              "format": ".2f"
-            }
+            {"field": "country", "type": "nominal"},
+            {"field": "continent", "type": "nominal"},
+            {"field": "health_care_index", "type": "quantitative", "format": ","},
+            {"field": "health_care_expenditure_index", "type": "quantitative", "format": ","},
+            {"field": "population", "type": "quantitative", "format": ","}
           ]
         }
       }
