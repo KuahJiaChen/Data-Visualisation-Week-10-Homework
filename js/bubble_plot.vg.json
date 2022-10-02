@@ -104,11 +104,11 @@
           },
           "opacity": {"value": 0.6},
           "tooltip": [
-            {"field": "country", "type": "nominal"},
-            {"field": "continent", "type": "nominal"},
-            {"field": "health_care_index", "type": "quantitative", "format": ","},
-            {"field": "health_care_expenditure_index", "type": "quantitative", "format": ","},
-            {"field": "population", "type": "quantitative", "format": ","}
+            {"field": "country", "type": "nominal", "title" : "Country Name"},
+            {"field": "continent", "type": "nominal", "title" : "Continent"},
+            {"field": "health_care_index", "type": "quantitative", "format": ",", "title" : "Health Care Index"},
+            {"field": "health_care_expenditure_index", "type": "quantitative", "format": ",", "title" : "Health Care Expenditure Index"},
+            {"field": "population", "type": "quantitative", "format": ",", "title" : "Population"}
           ]
         }
       },
@@ -132,11 +132,11 @@
             "value": 0
           },
           "tooltip": [
-            {"field": "country", "type": "nominal"},
-            {"field": "continent", "type": "nominal"},
-            {"field": "health_care_index", "type": "quantitative", "format": ","},
-            {"field": "health_care_expenditure_index", "type": "quantitative", "format": ","},
-            {"field": "population", "type": "quantitative", "format": ","}
+            {"field": "country", "type": "nominal","title": "Country Name"},
+            {"field": "continent", "type": "nominal", "title": "Continent"},
+            {"field": "health_care_index", "type": "quantitative", "format": "," , "title": "Health Care Index"},
+            {"field": "health_care_expenditure_index", "type": "quantitative", "format": ",", "title": "Health Care Expenditure Index"},
+            {"field": "population", "type": "quantitative", "format": "," , "title" : "Population"}
           ]
         }
       }
