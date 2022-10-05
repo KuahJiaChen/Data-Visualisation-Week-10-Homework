@@ -126,7 +126,7 @@
           "color": {"value": "black"},
           "opacity": {
             "condition": {
-              "test": "datum['country'] == 'China' || datum['country'] == 'Singapore' || datum['country'] == 'Australia' || datum['country'] == 'New Zealand' || datum['country'] == 'Italy' || datum['country'] == 'Yemen' ||  datum['country'] == 'United States'",
+              "test": "datum['country'] == 'China' || datum['country'] == 'Singapore' || datum['country'] == 'Australia' || datum['country'] == 'Iraq' || datum['country'] == 'Yemen' || datum['country'] == 'South Korea'",
               "value": 1
             },
             "value": 0
