@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 700,
+    "width": 900,
     "height": 500,
-    "title": "Health Care Quality in each country (2020)",
+    "title": {"text":"Health Care Quality in each country in 2020","fontSize":20,"font":"arial"},
     "data": {
       "url": "https://raw.githubusercontent.com/KuahJiaChen/Data-Visualisation-Week-10-Homework/main/data/bubble_plot.csv"
     },

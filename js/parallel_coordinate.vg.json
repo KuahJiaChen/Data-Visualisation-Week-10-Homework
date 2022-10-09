@@ -1,0 +1,161 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title":{"text":"Quality of Life Index in 2020","fontSize":20,"font":"arial"},
+    "description": "Though Vega-Lite supports only one scale per axes, one can create a parallel coordinate plot by folding variables, using `joinaggregate` to normalize their values and using ticks and rules to manually create axes.",
+    "data": {
+      "url": "https://raw.githubusercontent.com/KuahJiaChen/Data-Visualisation-2/main/dataset/parallel_coordinate.json"
+    },
+    "width": 950,
+    "height": 500,
+    "params": [
+    {
+      "name": "Continent_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "labels": [
+          "Show All",
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "name": "Continent Selection: "
+      }
+    }
+  ],
+    "transform": [
+      {"filter": "datum['quality_of_life_index']"},
+      {"window": [{"op": "count", "as": "index"}]},
+      {"fold": ["pollution_index", "safety_index","traffic_commute_time_index",  "health_care_index"]},
+      {
+        "joinaggregate": [
+          {"op": "min", "field": "value", "as": "min"},
+          {"op": "max", "field": "value", "as": "max"}
+        ],
+        "groupby": ["key"]
+      },
+      {
+        "calculate": "(datum.value - datum.min) / (datum.max-datum.min)",
+        "as": "norm_val"
+      },
+      {
+        "calculate": "(datum.min + datum.max) / 2",
+        "as": "mid"
+      },
+      {
+      "filter": "Continent_selection == null || datum.continent == Continent_selection"
+    }
+    ],
+    "layer": [{
+      "mark": {"type": "rule", "color": "#ccc"},
+      "encoding": {
+        "detail": {"aggregate": "count"},
+        "x": {"field": "key"}
+      }
+    }, {
+      "mark": {"type": "line", "size":3},
+      "encoding": {
+        "color": {"type": "nominal", "field": "continent", 
+        "scale": {
+              "domain": [
+                "South America",
+                "Oceania",
+                "Europe",
+                "Asia",
+                "North America",
+                "Africa"
+              ],
+              "range": [
+                "#8B0000",
+                "#FF7F50",
+                "#F0E68C",
+                "#483D8B",
+                "#EE82EE",
+                "#955251"
+              ]
+            }},
+        "detail": {"type": "nominal", "field": "index"},
+        "opacity": {"value": 0.7},
+        "x": {"type": "nominal", "field": "key"},
+        "y": {"type": "quantitative", "field": "norm_val", "axis": null},
+        "tooltip": [{
+          "type": "nominal",
+          "field": "country"
+        },{
+          "type": "nominal",
+          "field": "continent"
+        },{
+          "type": "quantitative",
+          "field": "pollution_index"
+        }, {
+          "type": "quantitative",
+          "field": "safety_index"
+        }, {
+          "type": "quantitative",
+          "field": "traffic_commute_time_index"
+        }, {
+          "type": "quantitative",
+          "field": "health_care_index"
+        }]
+      }
+    }, {
+      "encoding": {
+        "x": {"type": "nominal", "field": "key"},
+        "y": {"value": 0}
+      },
+      "layer": [{
+        "mark": {"type": "text", "style": "label"},
+        "encoding": {
+          "text": {"aggregate": "max", "field": "max"}
+        }
+      }, {
+        "mark": {"type": "tick", "style": "tick", "size": 8, "color": "#ccc"}
+      }]
+    }, {
+      "encoding": {
+        "x": {"type": "nominal", "field": "key"},
+        "y": {"value": 250}
+      },
+      "layer": [{
+        "mark": {"type": "text", "style": "label"},
+        "encoding": {
+          "text": {"aggregate": "min", "field": "mid"}
+        }
+      }, {
+        "mark": {"type": "tick", "style": "tick", "size": 8, "color": "#ccc"}
+      }]
+    }, {
+      "encoding": {
+        "x": {"type": "nominal", "field": "key"},
+        "y": {"value": 500}
+      },
+      "layer": [{
+        "mark": {"type": "text", "style": "label"},
+        "encoding": {
+          "text": {"aggregate": "min", "field": "min"}
+        }
+      }, {
+        "mark": {"type": "tick", "style": "tick", "size": 8, "color": "#ccc"}
+      }]
+    }],
+    "config": {
+      "axisX": {"domain": false, "labelAngle": 0, "tickColor": "#ccc", "title": null},
+      "view": {"stroke": null},
+      "style": {
+        "label": {"baseline": "middle", "align": "right", "dx": -5},
+        "tick": {"orient": "horizontal"}
+      }
+    }
+  }
+  
