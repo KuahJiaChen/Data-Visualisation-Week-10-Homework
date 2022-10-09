@@ -91,22 +91,29 @@
         "y": {"type": "quantitative", "field": "norm_val", "axis": null},
         "tooltip": [{
           "type": "nominal",
-          "field": "country"
+          "field": "country",
+          "title": "Country"
         },{
           "type": "nominal",
-          "field": "continent"
+          "field": "continent",
+          "title": "Continent"
+          
         },{
           "type": "quantitative",
-          "field": "pollution_index"
+          "field": "pollution_index",
+          "title": "Pollution Index"
         }, {
           "type": "quantitative",
-          "field": "safety_index"
+          "field": "safety_index",
+          "title": "Safety Index"
         }, {
           "type": "quantitative",
-          "field": "traffic_commute_time_index"
+          "field": "traffic_commute_time_index",
+          "title": "Traffic Commute Time Index"
         }, {
           "type": "quantitative",
-          "field": "health_care_index"
+          "field": "health_care_index",
+          "title": "Health Care Index"
         }]
       }
     }, {
