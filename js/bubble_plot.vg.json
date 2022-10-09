@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 900,
+    "width": "container",
     "height": 500,
     "title": {"text":"Health Care Quality in each country in 2020","fontSize":20,"font":"arial"},
     "data": {

@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {"text":"Average household expenditure ($ per capita) for each country throughout the period from 1960 to 2016",
   "fontSize":20,"font":"arial"},
-    "width": 850,
+    "width": "container",
     "height": 600,
   "data": {
     "url": "https://raw.githubusercontent.com/KuahJiaChen/Data-Visualisation-Homework/main/js/world_map.json",
